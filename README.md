@@ -1,5 +1,7 @@
 # PROXIMAL2 PIPELINE
 
+Read more about the method in our [paper] .
+
 ## 1. INPUT GENERATION
 
 *GenerateInput.py*: script to generate the metabolite and reaction files to generate the operators. **The queries need to be created separately and indipendently**. It analyzes the reactions and remove the cofactors from the substrates and products. If a reaction represents a transformations just between cofactors or all the substrates or all the products are cofactors, the reaction will be removed. To annotate the metabolites in chemical structures there are few databases that are parsed: PubChem, HMDB, KEGG, MetaNetX, RetroRules.
