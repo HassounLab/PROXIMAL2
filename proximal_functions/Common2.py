@@ -85,8 +85,8 @@ def ExtractPairs(reactions, metabolites):
     n_rxn = 0
     for idx in reactions.index:
         print("Removing Redundancy among Pairs. Reaction: %d/%d" % (idx, len(reactions)-1))
-        substrates = reactions.formula[idx].split(' -> ')[0].strip().split(' + ')
-        products = reactions.formula[idx].split(' -> ')[1].strip().split(' + ')
+        substrates = reactions.namesFormula[idx].split(' -> ')[0].strip().split(' + ')
+        products = reactions.namesFormula[idx].split(' -> ')[1].strip().split(' + ')
         compoundPair = []
         if len(substrates) > 1 and len(products) > 1:
             # Version to avoid association when all the substrate and products have a low
