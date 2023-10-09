@@ -93,6 +93,6 @@ Optional, if intel CPU, install performance enhancements:
 conda install -c conda-forge scikit-learn-intelex
 ```
 
-Once downloaded the folder, to run the algorithm download the RetroRules database (https://retrorules.org/dl/retrorules_dump) and extract in the input folder.
+Once downloaded the PROXIMAL2 folder, to run the algorithm download the RetroRules database (https://retrorules.org/dl/retrorules_dump) and extract in the input folder.
 
 
