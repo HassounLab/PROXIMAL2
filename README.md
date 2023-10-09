@@ -100,3 +100,10 @@ Once downloaded the PROXIMAL2 folder, to run the algorithm download the RetroRul
 To run the algorithm with the test files, run the *runPROX2.py* files as it is. The products will be saved in the *test/TESToutput/products* folder.
 
 Note that some reactions will take a couple of minutes to build the operators.
+
+## APPLICATION OF OTHER DATASETS
+
+To investigate the promiscuity of other reactions, defines the inputs as explained in the previous **INPUT** section, comment the lines from 16 to 22 and modify the line 29 of *runPROX2.py* as following:
+```
+if True:
+```
