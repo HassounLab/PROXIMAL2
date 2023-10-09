@@ -26,17 +26,18 @@ path_finalReactions = "./test/TESTinput/"
 ########################## APPLICATION FILES #################################
 # The molecule of interest must have the structure expressed in smiles.
 # It is implemented to accept a csv with tabulator as separator.
-# molecules_of_interest = pd.read_csv("./input/XXXX.csv", sep = "\t")
-# molecules_of_interest['smiles'] = [Chem.MolToSmiles(Chem.MolFromInchi(x)) for x in molecules_of_interest['Inchi']]
-# molecules_of_interest['ID'] = ['Met'+str(x) for x in range(len(molecules_of_interest['name']))]
-
-# The following two are created separately
-# metabolites = pd.read_csv("./input/reachableMolecules.csv")
-# reaction_list = pd.read_csv("./input/templateReactions.csv")
-
-# OP_CACHE_DIRECTORY = 'output/operators'
-# OUTPUT_DIRECTORY = 'output/products'
-# path_finalReactions = "./input/"
+if False:
+    molecules_of_interest = pd.read_csv("./input/XXXX.csv", sep = "\t")
+    molecules_of_interest['smiles'] = [Chem.MolToSmiles(Chem.MolFromInchi(x)) for x in molecules_of_interest['Inchi']]
+    molecules_of_interest['ID'] = ['Met'+str(x) for x in range(len(molecules_of_interest['name']))]
+    
+    # The following two are created separately
+    metabolites = pd.read_csv("./input/reachableMolecules.csv")
+    reaction_list = pd.read_csv("./input/templateReactions.csv")
+    
+    OP_CACHE_DIRECTORY = 'output/operators'
+    OUTPUT_DIRECTORY = 'output/products'
+    path_finalReactions = "./input/"
 
 ##############################################################################
 #Operator calculation (look-up tables)
