@@ -12,7 +12,8 @@ import re
 
 from .Common2 import FindNeighbors
 from rdkit import Chem
-Chem.WrapLogs()
+from rdkit.rdBase import WrapLogs
+WrapLogs()
 import json
 import math
 # from io import StringIO
