@@ -70,14 +70,29 @@ Any product output within the folder of the related pair is defined in json form
 In the input file are present the following files and folder:
 - *cofactors*: .csv file including name and inchi of some cofactors, to remove them from the reactions.
  
-## REQUIREMENTS
+## INSTALLATION AND REQUIREMENTS
 
-To run the whole algorithm there are needed the following dependencies:
-- rdkit
-- pubchempy
-- bioservices
-- kcfconvoy == 0.02
-	
-All the other should be installed all along with all the others (example: from rdkit it should be possible to obtain almost all the other).
+Set up the environment:
+```
+conda create -n p2 -c conda-forge -c bioconda rdkit pubchempy bioservices
+```
+```
+conda activate p2
+```
+```
+pip install kcfconvoy
+```
+```
+conda install -c anaconda pandas scikit-learn
+```
+```
+conda install -c conda-forge networkx=2.5
+```
+Optional, if intel CPU, install performance enhancements:
+```
+conda install -c conda-forge scikit-learn-intelex
+```
 
-On the other side, to run the algorithm, download the RetroRules database (https://retrorules.org/dl/retrorules_dump) and extract in the input folder.
+Once downloaded the folder, to run the algorithm download the RetroRules database (https://retrorules.org/dl/retrorules_dump) and extract in the input folder.
+
+
