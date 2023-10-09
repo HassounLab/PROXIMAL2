@@ -10,7 +10,16 @@ import pickle
 
 from .Common2 import Mutate, FindNeighbors, modifyAtomList, modifyBondList, ExtractCharge
 from rdkit import Chem
-from kcfconvoy import converter
+try:
+    from kcfconvoy import converter
+except ImportError:
+    from kcfconvoy import KCFvec
+    class converter:
+        @staticmethod
+        def rdkmol_to_kcf(rdkmol, cpd_name='NoName'):
+            vec = KCFvec()
+            vec.input_rdkmol(rdkmol, cpd_name=cpd_name)
+            return vec.kcf
 import re
 import itertools as it
 from rdkit.Chem import AllChem, DataStructs
