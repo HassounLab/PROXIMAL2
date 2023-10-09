@@ -25,7 +25,7 @@ In *proximal_functions* folder there are 4 code files:
 - *GenerateMolFiles2*: to create the predicted products.
 - *Common2*: collect few functions needed in the other steps.
 
-# PROXIMAL2 FILES
+# PROXIMAL2 FILES AND GENERAL EXPLANATION
 
 ## INPUT
 
@@ -70,7 +70,7 @@ Any product output within the folder of the related pair is defined in json form
 In the input file are present the following files and folder:
 - *cofactors*: .csv file including name and inchi of some cofactors, to remove them from the reactions.
  
-## INSTALLATION AND REQUIREMENTS
+# INSTALLATION, REQUIREMENTS AND TEST APPLICATION
 
 Set up the environment:
 ```
@@ -95,4 +95,8 @@ conda install -c conda-forge scikit-learn-intelex
 
 Once downloaded the PROXIMAL2 folder, to run the algorithm download the RetroRules database (https://retrorules.org/dl/retrorules_dump) and extract in the input folder.
 
+## TEST
 
+To run the algorithm with the test files, run the *runPROX2.py* files as it is. The products will be saved in the *test/TESToutput/products* folder.
+
+Note that some reactions will take a couple of minutes to build the operators.
